@@ -5,6 +5,10 @@
 <h1 align="center">RS3Bot — L’intelligence du Grand Marché pour RuneScape 3</h1>
 
 <p align="center">
+  <a href="README.md">🇬🇧 English</a> · <a href="README.fr.md">🇫🇷 Français</a>
+</p>
+
+<p align="center">
   <em>Suivez les prix. Repérez les flips. Tradez plus intelligemment. Dans une application Windows native.</em>
 </p>
 

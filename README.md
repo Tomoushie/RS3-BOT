@@ -5,6 +5,10 @@
 <h1 align="center">RS3Bot — Grand Exchange Intelligence for RuneScape 3</h1>
 
 <p align="center">
+  <a href="README.md">🇬🇧 English</a> · <a href="README.fr.md">🇫🇷 Français</a>
+</p>
+
+<p align="center">
   <em>Track prices. Spot flips. Trade smarter. All in one native Windows app.</em>
 </p>
 
