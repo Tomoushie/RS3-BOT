@@ -1,0 +1,29 @@
+# Build outputs
+target/
+dist/**/*.map
+node_modules/
+
+# Secrets & licenses (NEVER publish)
+secrets/
+*.pem
+*.key
+tests/fixtures/license-*.txt
+
+# Local data & backups
+backups/
+*.log
+*.tmp
+
+# OS / IDE
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Local screenshots / scratch
+_screenshots/
+*.ps1.tmp
+
+# Rust
+**/*.rs.bk
