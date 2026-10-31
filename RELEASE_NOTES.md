@@ -1,23 +1,23 @@
-# RS3Bot v1.2.0 — Grand Exchange Intelligence for RuneScape 3
+# RS3Bot v1.3.0 — Market Watch & map fixes
 
 **Track prices. Spot flips. Trade smarter.**
 
-RS3Bot is a native Windows app for the RuneScape 3 Grand Exchange: 33,778 items, multi-source prices, price history with predictions, Flip Score, liquidity, alchemy, buy-limit tracking, local trade journal and more.
+RS3Bot is a native Windows app for the RuneScape 3 Grand Exchange: 33,778 items, multi-source prices, price history with predictions, Flip Score, liquidity, alchemy, buy-limit tracking, local trade journal, interactive map and premium Market Watch.
 
 ### Download
-- `RS3Bot_1.2.0_x64-setup.exe` — recommended installer
-- `RS3Bot_1.2.0_x64_en-US.msi` — MSI package
+- `RS3Bot_1.3.0_x64-setup.exe` — recommended installer
+- `RS3Bot_1.3.0_x64_en-US.msi` — MSI package
 - `rs3-grand-market.exe` — portable executable
 
-### What’s new in v1.2.0
-- **Premium offline licenses** (Ed25519), activation in-app, backend fail-closed gating.
-- **Flip Planner**: best flips ranked by net profit per 4-hour buy-limit window.
-- Prediction line overlaid on the price chart (80% interval), liquidity badge, range position, recent trades, alchemy, buy limits.
-- Trade journal with notes, win rate and category performance.
-- 167-location interactive map with layers/search/dungeons, seasonal themes.
-- Local profiles, notifications toggle, tray support, custom cursor, French/English UI.
-- Security: PIN-protected profiles, encrypted remember-me, anti-bruteforce lock.
-- Fixed item-page header overflow, favourites alignment and French bank search.
+### What’s new in 1.3.0
+- **Market Watch (premium)**: post-event cycles (DXP / updates / none), sector scores, top 8 movers, Buy the dip / Sell the peak / Watch signals; optional event date (event or proxy mode).
+- **Beginner / Expert mode**: beginner by default, advanced indicators one click away.
+- **z-score + 30-day percentile**: combined Buy-the-dip / Sell-the-peak signal (Expert).
+- **Heartbeat & community**: internal online badge, ban/reconnection banners, opt-in public participation (off by default).
+- **Map fixes**: zone chips now load the zone (Varrock, Lumbridge Swamp…), zoom capped at 400% (no black tiles), mode labels without emoji.
+- **Item sheet polish**: Alerts / Volume alert / Similar items below the simulator; submissions date/price next to the name; volume-alert emoji removed.
+- **Craft fix**: alternative recipes are no longer merged (Cheese Wheel = Bucket of milk only).
+- **Holiday ticker** scrolls continuously; broken PriceCheck/RuneStats links cleaned.
 
 ### Requirements
 Windows 10/11 (x64). Internet connection for prices. Read-only analysis — no game account access, no automation.

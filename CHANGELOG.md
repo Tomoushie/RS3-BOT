@@ -1,7 +1,32 @@
 # Changelog — RS3Bot
 
-All notable changes to RS3Bot are documented here. The version follows the public release (`1.2.x`); internal milestones (V12 → V16) are noted for transparency.
+All notable changes to RS3Bot are documented here. The version follows the public release (`1.2.x`); internal milestones (V12 → V22) are noted for transparency.
 
+## [1.3.0] — 2026-10-31 — “Market Watch & map fixes” (V17 → V22)
+
+### Added
+- **Heartbeat / online + ban foundation** (V17): free Cloudflare Worker + D1, device hash, internal online badge, graceful ban/reconnection banners; public participation is opt-in and off by default.
+- **Beginner / Expert mode** (V18): beginner is the default; advanced indicators (long predictions, 80% interval, CSV, comparator, volume alert, real trades) are one click away in Settings.
+- **z-score + 30-day percentile + combined signal** (V19): Buy the dip / Sell the peak / Neutral badge (Expert mode only).
+- **Market Watch (premium)** (V21): post-event cycle profiles for DXP/updates, sector scores and top 8 movers (buy_dip / sell_peak / watch), optional event date with event/proxy mode.
+
+### Changed
+- Item sheet cards reorganised: Sources & cache, Real trades and Prediction under Buy limit; Alerts, Volume alert and Similar items side-by-side below the simulator.
+- Submissions rows: date and price are now adjacent to the item name.
+- Map mode labels no longer use emoji; nav labels vertically centred.
+- **Map zoom capped at 400%** (no more black tiles at 800%).
+- **Zone chips now work**: clicking Varrock / Lumbridge Swamp switches to the detailed zone and loads the map.
+- Holiday ticker scrolls continuously right→left.
+- PriceCheck.gg link now points to the homepage (deep links return 403); RuneStats removed (429).
+- Craft recipes no longer merge alternative recipes (Cheese Wheel correctly shows only Bucket of milk).
+- Window: account-delete confirmation now appears above the login screen.
+
+### Fixed
+- Tray/heartbeat/participation state leaking between Internal and Public builds.
+- Premium gating remains fail-closed in Public (license required for Market Watch, Flip Planner, map, mail, comparator).
+
+### Verification
+- Rust: 83 tests passed; worker: 12 tests; E2E strict **T1→T124: 123 PASS / 0 FAIL** (621 s).
 ## [1.2.0] — 2026-10-30 — “Grand Exchange Intelligence” (V16)
 
 ### Added
