@@ -2,6 +2,16 @@
 
 All notable changes to RS3Bot are documented here. The version follows the public release (`1.2.x`); internal milestones (V12 → V22) are noted for transparency.
 
+## [1.3.1] — 2026-11-01 — “Mean-reverting forecasts”
+
+### Fixed
+- Long-term forecasts (J+90/J+180) no longer extrapolate the latest OLS slope: they blend OLS with an Ornstein-Uhlenbeck mean-reversion model (30-day equilibrium mean), and the 80% interval is capped to the known historical envelope.
+- Item sheet “Prediction & trend” card now renders the backend `horizons` (it previously used a local OLS calculation and showed stale values such as 3 499 / 5 075 for Cheese).
+- `get_predictions` enriches a short local history (<10 points) with Weirdgloop last90d (cached 10 min).
+
+### Verified
+- Cheese (1985): J+90 ≈ 1 876 po, J+180 ≈ 1 861 po (CSV test: 1 887 / 1 861) instead of 3 499 / 5 075.
+- Rust: 85 tests passed; live UI card confirmed.
 ## [1.3.0] — 2026-10-31 — “Market Watch & map fixes” (V17 → V22)
 
 ### Added

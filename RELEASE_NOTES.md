@@ -1,23 +1,19 @@
-# RS3Bot v1.3.0 — Market Watch & map fixes
+# RS3Bot v1.3.1 — Mean-reverting forecasts
 
 **Track prices. Spot flips. Trade smarter.**
 
 RS3Bot is a native Windows app for the RuneScape 3 Grand Exchange: 33,778 items, multi-source prices, price history with predictions, Flip Score, liquidity, alchemy, buy-limit tracking, local trade journal, interactive map and premium Market Watch.
 
 ### Download
-- `RS3Bot_1.3.0_x64-setup.exe` — recommended installer
-- `RS3Bot_1.3.0_x64_en-US.msi` — MSI package
+- `RS3Bot_1.3.1_x64-setup.exe` — recommended installer
+- `RS3Bot_1.3.1_x64_en-US.msi` — MSI package
 - `rs3-grand-market.exe` — portable executable
 
-### What’s new in 1.3.0
-- **Market Watch (premium)**: post-event cycles (DXP / updates / none), sector scores, top 8 movers, Buy the dip / Sell the peak / Watch signals; optional event date (event or proxy mode).
-- **Beginner / Expert mode**: beginner by default, advanced indicators one click away.
-- **z-score + 30-day percentile**: combined Buy-the-dip / Sell-the-peak signal (Expert).
-- **Heartbeat & community**: internal online badge, ban/reconnection banners, opt-in public participation (off by default).
-- **Map fixes**: zone chips now load the zone (Varrock, Lumbridge Swamp…), zoom capped at 400% (no black tiles), mode labels without emoji.
-- **Item sheet polish**: Alerts / Volume alert / Similar items below the simulator; submissions date/price next to the name; volume-alert emoji removed.
-- **Craft fix**: alternative recipes are no longer merged (Cheese Wheel = Bucket of milk only).
-- **Holiday ticker** scrolls continuously; broken PriceCheck/RuneStats links cleaned.
+### What’s new in 1.3.1
+- **Long-term forecasts fixed**: J+7/J+30 keep OLS; J+90/J+180 now use an Ornstein-Uhlenbeck mean-reversion blend (30-day equilibrium mean) instead of extrapolating the latest slope. Cheese J+90 ≈ 1 876 po (was 3 499), J+180 ≈ 1 861 po (was 5 075).
+- **Prediction card fixed**: the item sheet “Prediction & trend” card now renders the backend horizons; the stale local OLS values are gone.
+- **History enrichment**: `get_predictions` fills a short local history with Weirdgloop last90d (cached 10 min), so the long-term model has enough context.
+- **Intervals**: 80% long-term intervals are capped to the known historical price envelope (no more confidence above the all-time high).
 
 ### Requirements
 Windows 10/11 (x64). Internet connection for prices. Read-only analysis — no game account access, no automation.
